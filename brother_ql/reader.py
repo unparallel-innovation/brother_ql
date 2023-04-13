@@ -33,6 +33,7 @@ OPCODES = {
     b'\x1b\x69\x55\x77\x01': ('amedia',        127, "Additional media information command"),
     b'\x1b\x69\x55\x4A':     ('jobid',          14, "Job ID setting command"),
     b'\x1b\x69\x58\x47':     ("request_config",  0, "Request transmission of .ini config file of printer"),
+    b'\x1b\x69\x6B\x63':     ("number_of_copies",  2, "Internal specification commands"),
     b'\x1b\x69\x53':         ('status request',  0, "A status information request sent to the printer"),
     b'\x80\x20\x42':         ('status response',29, "A status response received from the printer"),
 }
@@ -66,8 +67,13 @@ RESP_ERROR_INFORMATION_2_DEF = {
 RESP_MEDIA_TYPES = {
   0x00: 'No media',
   0x01: 'Laminated tape',
-  0x03: 'Non-laminated type',
-  0x11: 'Heat-Shrink Tube',
+  0x03: 'Non-laminated tape',
+  0x04: 'Fabric tape',
+  0x11: 'Heat-Shrink Tube (HS 2:1)',
+  0x13: 'Fle tape',
+  0x14: 'Flexible ID tape',
+  0x15: 'Satin tape',
+  0x17: 'Heat-Shrink Tube (HS 3:1)',
   0x0A: 'Continuous length tape',
   0x0B: 'Die-cut labels',
 }
